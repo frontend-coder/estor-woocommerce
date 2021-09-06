@@ -31,12 +31,14 @@ require_once get_template_directory() . '/inc/theme-settings.php';
 require_once get_template_directory() . '/inc/theme-widgets.php';
 require_once get_template_directory() . '/inc/theme-scripts-style.php';
 require_once get_template_directory() . '/inc/helpers.php';
+require_once get_template_directory() . '/inc/header-setup.php';
 
 
 /**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-footer.php';
 
 /**
  * Custom template tags for this theme.
@@ -53,6 +55,9 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+require get_template_directory() . '/inc/ajax.php';
+require get_template_directory() . '/inc/navigations.php';
+
 /**
  * Load Jetpack compatibility file.
  */
@@ -67,4 +72,5 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 	require get_template_directory() . '/woocommerce/wc-functions.php';
 	require get_template_directory() . '/woocommerce/wc-functions-remove.php';
+require get_template_directory() . '/woocommerce/parts/wc_functions_cart.php';
 }
